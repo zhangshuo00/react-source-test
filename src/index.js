@@ -2,11 +2,13 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import ConcurrentDemo from "./ConcurrentDemo";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/*<ConcurrentDemo/>*/}
   </React.StrictMode>,
   document.getElementById('root')
 );

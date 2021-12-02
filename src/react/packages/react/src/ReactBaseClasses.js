@@ -16,7 +16,6 @@ if (__DEV__) {
  * Base class helpers for the updating state of a component.
  */
 function Component(props, context, updater) {
-  // debugger;
   this.props = props;
   this.context = context;
   // If a component has string refs, we will assign a different object later.
@@ -49,7 +48,7 @@ Component.prototype.isReactComponent = {};
  *
  * @param {object|function} partialState Next partial state or function to
  *        produce next partial state to be merged with current state.
- * @param {?function} callback Called after state is updated.
+ * @param {?function} callback Called after state is updated. state更新后的回调函数(可选)
  * @final
  * @protected
  */

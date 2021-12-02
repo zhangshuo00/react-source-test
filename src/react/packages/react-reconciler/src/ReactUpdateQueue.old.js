@@ -116,12 +116,14 @@ export type Update<State> = {|
   // TODO: Temporary field. Will remove this by storing a map of
   // transition -> event time on the root.
   eventTime: number,
-  lane: Lane,
+  lane: Lane, // update 所属的优先级
 
   tag: 0 | 1 | 2 | 3,
   payload: any,
   callback: (() => mixed) | null,
 
+  // 指向链表中的下一个，由于 UpdateQueue 是环形链表
+  // 最后一个 update.next 指向第一个 update 对象
   next: Update<State> | null,
 |};
 
